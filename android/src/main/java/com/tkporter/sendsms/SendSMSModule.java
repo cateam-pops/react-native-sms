@@ -29,7 +29,11 @@ public class SendSMSModule extends ReactContextBaseJavaModule implements Activit
     public String getName() {
         return "SendSMS";
     }
-
+    
+    @Override    
+    public boolean canOverrideExistingModule() {        
+        return true;    
+    }
 
     @Override
     public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
